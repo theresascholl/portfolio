@@ -148,6 +148,21 @@ header {
   flex-basis: 20em;
 }
 
+#resume {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#resume a {
+  background-color: #de8aa7;
+  color: white;
+  font-weight: 100;
+  padding: 1.5% 4%;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 #modal {
   display: none;
   width: 90%;
