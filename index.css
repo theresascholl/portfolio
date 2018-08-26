@@ -299,7 +299,7 @@ header {
   border: 2px solid #dd8aa7;
   border-radius: 50%;
   width: 5%;
-  margin-right: 15px;
+  margin: 7px;
   padding: 3%;
 }
 
@@ -389,8 +389,8 @@ to {
   }
 
   #profile-pic {
-    width: 18rem;
-    height: 18rem;
+    width: 16rem;
+    height: 16rem;
   }
 
   #modal {
@@ -400,6 +400,7 @@ to {
 
   #modal-close {
     width: 2em;
+    cursor: pointer;
   }
 
   #modal-headline {
