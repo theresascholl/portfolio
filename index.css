@@ -18,7 +18,7 @@ body {
 
 h2 {
   text-align: center;
-  margin: 0;
+  margin: 0 0 30px 0;
   font-size: 3em;
   text-transform: uppercase;
   font-weight: 300;
@@ -28,6 +28,15 @@ h2 {
 h3 {
   margin-top: 0;
   text-transform: uppercase;
+}
+
+h4 {
+  margin: 0;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-align: center
 }
 
 p {
@@ -65,7 +74,6 @@ header {
   display: flex;
 }
 
-
 .nav-item {
   padding: 0 10px;
   text-transform: uppercase;
@@ -89,27 +97,32 @@ header {
   width: 95%;
   max-height: 70vh;
 }
-
-#about {
-  margin-bottom: 170px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+/* 
+.heading-circle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 20px 20px 10px;
 }
 
-#about .pink-line {
-  border-bottom: 2px solid #de88a5;;
-  width: 95px;
-  margin-bottom: 50px;
-  margin-right: auto;
-  margin-left: auto;
+.pink-line {
+  border: 2px solid #de88a5;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  margin-right: 20px;
+} */
+
+#about {
+  margin: 0 10% 170px 10%;
+  padding: 3vw;
+  border: 2px solid #de8aa7;
 }
 
 #profile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 20px;
 }
 
 #profile-container {
@@ -125,7 +138,7 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: solid 2px #de88a5;
+  border: solid 1px lightgrey;
 }
 
 .profile-content {
@@ -207,14 +220,6 @@ header {
   object-fit: contain;
 }
 
-#portfolio .pink-line {
-  border-bottom: 2px solid #de88a5;;
-  width: 130px;
-  margin-bottom: 50px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 #test {
   column-count: 2;
   column-gap: 10px;
@@ -267,14 +272,6 @@ header {
   opacity: 1;
 }
 
-h4 {
-  margin: 0;
-  font-size: 3em;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
-
 #contact {
   margin-bottom: 170px;
 }
@@ -283,16 +280,21 @@ h4 {
   margin: 0 10%;
   padding: 5vw;
   border: 2px solid #de8aa7;
+  text-align: center;
 }
 
 .contact-links {
   display: flex;
   margin: 30px 0 60px 0;
+  justify-content: center;
 }
 
 .contact-links a {
-  width: 7%;
+  border: 2px solid #dd8aa7;
+  border-radius: 50%;
+  width: 5%;
   margin-right: 15px;
+  padding: 3%;
 }
 
 .contact-links img {
