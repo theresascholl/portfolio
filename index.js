@@ -1,163 +1,5 @@
 
 
-
-// NAVBAR
-
-// let header = document.querySelector("header");
-// let logo = document.getElementById("logo");
-// let target = document.getElementById("main-img");
-
-// window.addEventListener("load", function(event) {
-//   createObserver();
-// }, false);
-
-// function createObserver() {
-//   let options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 1
-//   }  
-//   let observer = new IntersectionObserver(handler, options);
-//   observer.observe(target);  
-// }  
-
-// function handler(mainImg, observer) {
-//   if (mainImg.isIntersecting) {
-//     logo.classList.add('fade-in');
-//     observer.unobserve(mainImg.target);
-//   } else {
-//     logo.classList.remove('fade-in');
-//     logo.classList.add('fade-out');   
-//   }
-// }
-
-
-// const experienceList = document.querySelectorAll(".experience-entry");
-
-// window.addEventListener("load", function(event) {
-//   createObserver();
-// }, false);
-
-// function createObserver() {
-//   let options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.1
-//   }  
-//   let observer = new IntersectionObserver(handler, options);
-//   experienceList.forEach(experience => observer.observe(experience));  
-// }  
-
-// function handler(entries, observer) {
-//   entries.forEach(function(entry) {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('slide-in');
-//     } else {
-//       entry.target.classList.remove('slide-in');
-//     }
-//   });
-// }
-
-
-
-
-// var options = {
-//   root: document.querySelector('#about'),
-//   rootMargin: '0px',
-//   threshold: 0.2
-// }
-
-// var observer = new IntersectionObserver(callback, options);
-
-
-// SHOW RESUME
-
-// const jobs = document.querySelectorAll('.job');
-// // function getPosition( el ) {
-// //   var x = 0;
-// //   var y = 0;
-// //   while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-// //   x += el.offsetLeft - el.scrollLeft;
-// //   y += el.offsetTop - el.scrollTop;
-// //   el = el.offsetParent;
-// //   }
-// //   console.log(y);
-// //   console.log(x);
-// //   return { top: y, left: x };
-// // }
-// // getPosition(jobs[0]);
-// function getPosition( el ) {
-//   var x = 0;
-//   var y = 0;
-//   while( el && !isNaN( el.offsetTop ) ) {
-//   y += el.offsetTop - el.scrollTop;
-//   el = el.offsetParent;
-//   }
-//   console.log(y);
-// }
-// getPosition(jobs[1]);
-
-// Fetch API
-// let showResume = () => {
-
-//   const jobs = document.querySelectorAll(".job");
-
-
-
-//   fetch('http://localhost:3000/experience')
-//   .then(res => res.json())
-//   .then(experiences => {
-//     let output = "";
-//     experiences.forEach(experience => {
-//       output += 
-//       `<div class="wall-entry" data-toggle="modal" data-id="${experiences.indexOf(experience)}">
-//         <img src="${experience.images[0].img}" alt="${experience.images[0].img}" class="wall-img"/>
-//         <div class="img-overlay">
-//           <h3>${experience.experience}</h3>
-//           <p>${experience.about}</p>
-//         </div>
-//       </div>`;
-//     })
-//     document.querySelector("#test").innerHTML = output;
-//   })
-//   .then(output => {
-//     const portfolioImg = document.querySelectorAll(".wall-entry");
-//     portfolioImg.forEach(img => img.addEventListener('click', showModal))})
-//   .catch(err => console.log(err))
-// }
-// showResume();
-
-
-// CANVAS FOR RESUME
-
-// let draw = () => {
-//   const container = document.querySelector("#experience");
-//   const canvas = document.querySelector("#myCanvas");
-//   const ctx = canvas.getContext("2d");
-//   canvas.width = window.innerWidth;
-//   canvas.height = window.innerHeight;
-
-//   // line
-//   ctx.beginPath();
-//   ctx.moveTo(ctx.canvas.width / 3 , 0);
-//   ctx.lineTo(ctx.canvas.width / 3 , container.offsetHeight);
-//   ctx.strokeStyle = '#de88a5';
-//   ctx.stroke();
-
-//   // circles
-//   ctx.beginPath();
-//   const x = ctx.canvas.width / 3; // x coordinate
-//   const y = 10; // y coordinate
-//   const radius = 10; // Arc radius
-//   const startAngle = 0; // Starting point on circle
-//   const endAngle = Math.PI * 2; // End point on circle
-//   const anticlockwise = true; // clockwise or anticlockwise
-//   ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-//   ctx.fillStyle = '#de88a5';
-//   ctx.fill();
-// }
-
-
 // SHOW / HIDE MODAL FOR PORTFOLIO
 
 let showModal = (e) => {
@@ -279,3 +121,16 @@ showPortfolio();
 // showPortfolio();
 
 // window.onload(draw());
+
+const accordionHeadline = document.querySelector("#accordion-headline");
+const accordionContent = document.querySelector("#accordion");
+
+accordionHeadline.addEventListener("click", function() {
+  if (accordionContent.style.display === "block") {
+    accordionContent.style.display = "none";
+    accordionHeadline.innerHTML = "Impressum &dtrif;";
+  } else {
+    accordionContent.style.display = "block";
+    accordionHeadline.innerHTML = "Impressum &utrif;";
+  }
+});
