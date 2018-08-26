@@ -218,7 +218,9 @@ let closeModal = (e) => {
 
 // Fetch API
 let showPortfolio = () => {
-  fetch('http://localhost:3000/portfolio')
+  fetch('db.json', {
+    mode: 'no-cors'
+  })
   .then(res => res.json())
   .then(projects => {
     let output = "";
