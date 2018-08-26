@@ -168,9 +168,7 @@ let showModal = (e) => {
   })
   .then(res => res.json())
   .then(projects => {  
-
-    console.log(projects[0]);
-
+    
     const modal = document.querySelector("#modal");
     const backdrop = document.querySelector("#backdrop");
     const body = document.querySelector("body");
@@ -181,17 +179,17 @@ let showModal = (e) => {
 
     let output =
     `<div id="modal-header">
-    <h3 id="modal-headline">${projects[target].project}</h3>
+    <h3 id="modal-headline">${projects.portfolio[target].project}</h3>
     <div id="modal-close"><img src="./img/close.svg" alt="close"/></div>
     </div>
     <div id="modal-content">
-    <p id="modal-description">${projects[target].about.replace(/\n/g, '<br />')}</p>
+    <p id="modal-description">${projects.portfolio[target].about.replace(/\n/g, '<br />')}</p>
     <div id="modal-slider"></div>
     </div>`;
     document.querySelector("#modal").innerHTML = output;
 
     let imgGallery = "";
-    projects[target].images.forEach(img => {
+    projects.portfolio[target].images.forEach(img => {
       imgGallery +=
         `<img src="${img.img}" alt="" class="slider-img"/>`
     });
@@ -224,9 +222,9 @@ let showPortfolio = () => {
   .then(res => res.json())
   .then(projects => {
     let output = "";
-    projects.forEach(project => {
+    projects.portfolio.forEach(project => {
       output += 
-      `<div class="wall-entry" data-toggle="modal" data-id="${projects.indexOf(project)}">
+      `<div class="wall-entry" data-toggle="modal" data-id="${projects.portfolio.indexOf(project)}">
         <img src="${project.images[0].img}" alt="${project.images[0].img}" class="wall-img"/>
         <div class="img-overlay">
           <h3>${project.project}</h3>
