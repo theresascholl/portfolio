@@ -163,7 +163,9 @@
 let showModal = (e) => {
   const target = e.currentTarget.dataset.id;
 
-  fetch('http://localhost:3000/portfolio')
+  fetch('db.json', {
+    mode: 'no-cors'
+  })
   .then(res => res.json())
   .then(projects => {  
 
