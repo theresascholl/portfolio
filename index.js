@@ -123,14 +123,15 @@ showPortfolio();
 // window.onload(draw());
 
 const accordionHeadline = document.querySelector("#accordion-headline");
+const accordionImg = document.querySelector("#accordion-img");
 const accordionContent = document.querySelector("#accordion");
 
 accordionHeadline.addEventListener("click", function() {
   if (accordionContent.style.display === "block") {
     accordionContent.style.display = "none";
-    accordionHeadline.innerHTML = "Impressum &dtrif;";
+    accordionImg.style.transform = "rotate(0deg)";
   } else {
     accordionContent.style.display = "block";
-    accordionHeadline.innerHTML = "Impressum &utrif;";
+    accordionImg.style.transform = "rotate(180deg)";
   }
 });

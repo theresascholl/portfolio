@@ -227,14 +227,15 @@ header {
 
 #test {
   column-count: 2;
-  column-gap: 10px;
-  margin: 0 10px 170px 10px;
+  column-gap: 40px;
+  margin: 0 40px 170px 40px;
   line-height: 30px;
 }
 
 .wall-entry {
   position: relative;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .wall-img {
@@ -279,43 +280,79 @@ header {
 }
 
 #contact {
-  margin-bottom: 170px;
+  margin-bottom: 70px;
 }
 
 #contact-information {
   margin: 0 10%;
   padding: 5vw;
-  border: 2px solid #de8aa7;
+  /* border: 2px solid #de8aa7; */
   text-align: center;
 }
 
 .contact-links {
-  display: flex;
-  margin: 30px 0 60px 0;
-  justify-content: center;
+  margin: 30px 0 170px 0;
 }
 
 .contact-links a {
-  border: 2px solid #dd8aa7;
-  border-radius: 50%;
-  width: 5%;
-  margin: 7px;
-  padding: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-links img {
+.contact-logo {
+  border: 2px solid #dd8aa7;
+  border-radius: 50%;
+  width: 3.5vw;
+  margin-right: -22px;
+  padding: 2.5vw;
+  display: inline-block;
+}
+
+.logo-text {
+  display: inline-block;
+  border: 2px solid #dd8aa7;
+  font-size: 1.5em;
+  font-weight: 100;
+  border-radius: 3em;
+  padding: 3.5vw;
+  text-align: left;
+  width: 35vw;
+}
+
+.contact-logo img {
   width: 100%;
 }
 
 #accordion-headline {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#accordion-headline h2 {
+  margin: 0 15px 0 0;
+}
+
+#accordion-img {
+  /* transform: rotate(90deg); */
+  width: 7%;
+}
+
+#accordion-img img {
+  width: 100%;
 }
 
 #accordion {
   display: none;
 }
 
-
+.impressum-text {
+  text-align: justify;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
 
 
 /* ANIMATIONS */
@@ -393,6 +430,11 @@ to {
     height: 16rem;
   }
 
+  .profile-content {
+    font-size: 0.75em;
+    line-height: 1.5em;
+  }
+
   #modal {
     width: 100%;
     height: 100%;
@@ -421,6 +463,8 @@ to {
 
   #modal-slider {
     overflow-y: initial;
+    height: calc(100% + 105px);
+    max-height: initial;
   }
 
   .img-overlay {
@@ -450,8 +494,31 @@ to {
     column-count: 1;
   }
 
-  .contact-links a {
-    width: 10%;
-    padding: 7%;
+  .contact-logo {
+    width: 6.5vw;
+    margin-right: -12px;
+    padding: 6.5vw;
+  }
+
+  .logo-text {
+    font-size: 0.9em;
+    width: 60vw;
+    border-radius: 3em;
+    padding: 6.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo-text {
+    width: 60vw;
+    font-size: 1.2em;
+    border-radius: 3em;
+    padding: 5vw;
+  }
+
+  .contact-logo {
+    width: 5vw;
+    margin-right: -12px;
+    padding: 5vw;
   }
 }
